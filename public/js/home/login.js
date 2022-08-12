@@ -1,1 +1,2 @@
-console.group("hello");
+console.log("hello");
+console.log('bye')
