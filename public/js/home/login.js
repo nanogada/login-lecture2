@@ -1,13 +1,19 @@
 const id = document.querySelector("#id"),
     psword = document.querySelector("#pwd"),
     loginbtn = document.querySelector("#login_button");
-console.log(id);
+
 loginbtn.addEventListener("click", () => {
-    const req={
+    const req = {
         id: id.value,
         psword: psword.value,
     };
-    console.log(req);
-    console.log(JSON.stringify(req));
+    fetch("/login", {
+        method: "POST",
+        headers: {
+            "Context-Type": "application/json",
+        },
+        body: JSON.stringify(req),
+    }).then((res) => res.json()).then((res) => console.log(res));
+
 
 });
