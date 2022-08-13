@@ -8,4 +8,6 @@ loginbtn.addEventListener("click", () => {
         psword: psword.value,
     };
     console.log(req);
+    console.log(JSON.stringify(req));
+
 });
